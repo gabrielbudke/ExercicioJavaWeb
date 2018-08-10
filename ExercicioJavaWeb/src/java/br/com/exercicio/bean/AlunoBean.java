@@ -7,7 +7,7 @@ public class AlunoBean {
 
     private int id;
     private String nome, codigo_matricula, situacao;
-    private float nota_1, nota_2, nota_3, nota_4, media;
+    private float nota1, nota2, nota3, nota4, media;
     private byte frequencia;
 
     public String getSituacao() {
@@ -50,36 +50,36 @@ public class AlunoBean {
         this.codigo_matricula = codigo_matricula;
     }
 
-    public float getNota_1() {
-        return nota_1;
+    public float getNota1() {
+        return nota1;
     }
 
-    public void setNota_1(float nota_1) {
-        this.nota_1 = nota_1;
+    public void setNota1(float nota1) {
+        this.nota1 = nota1;
     }
 
     public float getNota_2() {
-        return nota_2;
+        return nota2;
     }
 
     public void setNota_2(float nota_2) {
-        this.nota_2 = nota_2;
+        this.nota2 = nota_2;
     }
 
     public float getNota_3() {
-        return nota_3;
+        return nota3;
     }
 
     public void setNota_3(float nota_3) {
-        this.nota_3 = nota_3;
+        this.nota3 = nota_3;
     }
 
     public float getNota_4() {
-        return nota_4;
+        return nota4;
     }
 
     public void setNota_4(float nota_4) {
-        this.nota_4 = nota_4;
+        this.nota4 = nota_4;
     }
 
     public byte getFrequencia() {
@@ -89,5 +89,8 @@ public class AlunoBean {
     public void setFrequencia(byte frequencia) {
         this.frequencia = frequencia;
     }
+    
+    public double calcularMedia(){
+        return nota1 + noo
 
 }

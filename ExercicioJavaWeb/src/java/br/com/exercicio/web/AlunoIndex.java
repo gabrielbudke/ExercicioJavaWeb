@@ -49,7 +49,7 @@ public class AlunoIndex extends HttpServlet {
         out.println("               <tr>");
         out.println("			<td>" + aluno.getCodigo_matricula() + "</td>");
         out.println("			<td>" + aluno.getNome() + "</td>");
-        out.println("			<td>" + aluno.getNota_1() + "</td>");
+        out.println("			<td>" + aluno.getNota1() + "</td>");
         out.println("			<td>" + aluno.getNota_2() + "</td>");
         out.println("			<td>" + aluno.getNota_3() + "</td>");
         out.println("			<td>" + aluno.getNota_4() + "</td>");

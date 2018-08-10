@@ -34,7 +34,7 @@ public class AlunoDAO {
                 aluno.setId(resultSet.getInt("id"));
                 aluno.setCodigo_matricula(resultSet.getString("codigo_matricula"));
                 aluno.setNome(resultSet.getString("nome"));
-                aluno.setNota_1(resultSet.getFloat("nota_1"));
+                aluno.setNota1(resultSet.getFloat("nota_1"));
                 aluno.setNota_2(resultSet.getFloat("nota_2"));
                 aluno.setNota_3(resultSet.getFloat("nota_3"));
                 aluno.setNota_4(resultSet.getFloat("nota_4"));
@@ -60,7 +60,7 @@ public class AlunoDAO {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             ps.setString(1, aluno.getNome());
             ps.setString(2, aluno.getCodigo_matricula());
-            ps.setFloat(3, aluno.getNota_1());
+            ps.setFloat(3, aluno.getNota1());
             ps.setFloat(4, aluno.getNota_2());
             ps.setFloat(5, aluno.getNota_3());
             ps.setFloat(6, aluno.getNota_4());
