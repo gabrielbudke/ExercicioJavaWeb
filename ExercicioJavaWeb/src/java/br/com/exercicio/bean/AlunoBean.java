@@ -91,6 +91,6 @@ public class AlunoBean {
     }
     
     public double calcularMedia(){
-        return nota1 + noo
+        return nota1 + nota2 + nota3 + nota4 / 4;
 
 }
