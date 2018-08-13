@@ -36,6 +36,8 @@ public class AlunoIndex extends HttpServlet {
         out.println("<div>");
         out.println("	<table>");
         out.println("		<thead>");
+        
+        out.println("			<th>ID</th>");
         out.println("			<th>Código Matrícula</th>");
         out.println("			<th>Nome</th>");
         out.println("			<th>Nota1</th>");
@@ -45,20 +47,26 @@ public class AlunoIndex extends HttpServlet {
         out.println("			<th>Média</th>");
         out.println("			<th>Frequencia</th>");
         out.println("			<th>Situação</th>");
+        out.println("			<th>Ação</th>");
         out.println("		</thead>");
         out.println("		<tbody>");
 
         for (AlunoBean aluno : alunos) {
         out.println("               <tr>");
+        out.println("			<td>" + aluno.getId()+ "</td>");
         out.println("			<td>" + aluno.getCodigoMatricula()+ "</td>");
         out.println("			<td>" + aluno.getNome() + "</td>");
         out.println("			<td>" + aluno.getNota1() + "</td>");
         out.println("			<td>" + aluno.getNota2() + "</td>");
         out.println("			<td>" + aluno.getNota3() + "</td>");
         out.println("			<td>" + aluno.getNota4() + "</td>");
-        out.println("			<td>" + aluno.getMedia() + "</td>");
+        out.println("			<td>" + aluno.calcularMedia() + "</td>");
         out.println("			<td>" + aluno.getFrequencia() + "</td>");
         out.println("			<td>" + aluno.getSituacao() + "</td>");
+        out.println("			<td>");
+        out.println("                      <a href='/ExercicioJavaWeb/alunos/excluir?id=" + aluno.getId()+ "'>Excluir</a>");
+        out.println("                      <a href='/ExercicioJavaWeb/alunos/editar?id=" + aluno.getId()+ "'>Editar</a>");
+        out.println(                   "</td>");
         out.println("               </tr>");
 
         }
