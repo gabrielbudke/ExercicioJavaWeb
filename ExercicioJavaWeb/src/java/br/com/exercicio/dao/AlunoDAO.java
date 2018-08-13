@@ -32,13 +32,13 @@ public class AlunoDAO {
             while (resultSet.next()) {
                 AlunoBean aluno = new AlunoBean();
                 aluno.setId(resultSet.getInt("id"));
-                aluno.setCodigo_matricula(resultSet.getString("codigo_matricula"));
+                aluno.setCodigoMatricula(resultSet.getString("codigo_matricula"));
                 aluno.setNome(resultSet.getString("nome"));
                 aluno.setNota1(resultSet.getFloat("nota_1"));
-                aluno.setNota_2(resultSet.getFloat("nota_2"));
-                aluno.setNota_3(resultSet.getFloat("nota_3"));
-                aluno.setNota_4(resultSet.getFloat("nota_4"));
-                aluno.setNota_4(resultSet.getFloat("media"));
+                aluno.setNota2(resultSet.getFloat("nota_2"));
+                aluno.setNota3(resultSet.getFloat("nota_3"));
+                aluno.setNota4(resultSet.getFloat("nota_4"));
+                aluno.setMedia(resultSet.getFloat("media"));
                 aluno.setFrequencia(resultSet.getByte("frequencia"));
                 aluno.setSituacao(resultSet.getString("situacao"));
                 alunos.add(aluno);
@@ -59,11 +59,11 @@ public class AlunoDAO {
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             ps.setString(1, aluno.getNome());
-            ps.setString(2, aluno.getCodigo_matricula());
+            ps.setString(2, aluno.getCodigoMatricula());
             ps.setFloat(3, aluno.getNota1());
-            ps.setFloat(4, aluno.getNota_2());
-            ps.setFloat(5, aluno.getNota_3());
-            ps.setFloat(6, aluno.getNota_4());
+            ps.setFloat(4, aluno.getNota2());
+            ps.setFloat(5, aluno.getNota3());
+            ps.setFloat(6, aluno.getNota4());
             ps.setFloat(7, aluno.getMedia());
             ps.setByte(8, aluno.getFrequencia());
             ps.setString(9, aluno.getSituacao());

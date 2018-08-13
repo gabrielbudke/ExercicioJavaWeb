@@ -24,9 +24,9 @@ public class AlunoCadastro extends HttpServlet {
         out.println("	<title>Cadastro Aluno</title>");
         out.println("</head>");
         out.println("<body>");
-        out.println("	<form action='/ExercicioJavaWeb/cadastro/store' metho='post'>");
+        out.println("	<form action='/ExercicioJavaWeb/alunos/store' method='post'>");
         out.println("		<div>");
-        out.println("			<label for=''>Nome</label>");
+        out.println("			<label for='campo-nome'>Nome</label>");
         out.println("			<input type='text' id='campo-nome' name='nome'>");
         out.println("		</div>");
         out.println("		<div>");

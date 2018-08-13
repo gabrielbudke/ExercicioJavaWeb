@@ -31,6 +31,9 @@ public class AlunoIndex extends HttpServlet {
         out.println("</head>");
         out.println("<body>");
         out.println("<div>");
+        out.println("<a href='/ExercicioJavaWeb/alunos/cadastro'>Novo</a>");
+        out.println("</div>");
+        out.println("<div>");
         out.println("	<table>");
         out.println("		<thead>");
         out.println("			<th>Código Matrícula</th>");
@@ -47,12 +50,12 @@ public class AlunoIndex extends HttpServlet {
 
         for (AlunoBean aluno : alunos) {
         out.println("               <tr>");
-        out.println("			<td>" + aluno.getCodigo_matricula() + "</td>");
+        out.println("			<td>" + aluno.getCodigoMatricula()+ "</td>");
         out.println("			<td>" + aluno.getNome() + "</td>");
         out.println("			<td>" + aluno.getNota1() + "</td>");
-        out.println("			<td>" + aluno.getNota_2() + "</td>");
-        out.println("			<td>" + aluno.getNota_3() + "</td>");
-        out.println("			<td>" + aluno.getNota_4() + "</td>");
+        out.println("			<td>" + aluno.getNota2() + "</td>");
+        out.println("			<td>" + aluno.getNota3() + "</td>");
+        out.println("			<td>" + aluno.getNota4() + "</td>");
         out.println("			<td>" + aluno.getMedia() + "</td>");
         out.println("			<td>" + aluno.getFrequencia() + "</td>");
         out.println("			<td>" + aluno.getSituacao() + "</td>");
