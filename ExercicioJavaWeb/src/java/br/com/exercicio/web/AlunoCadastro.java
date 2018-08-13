@@ -22,6 +22,7 @@ public class AlunoCadastro extends HttpServlet {
         out.println("<html>");
         out.println("<head>");
         out.println("	<title>Cadastro Aluno</title>");
+        out.println("	<link rel='stylesheet' type='text/css' href='materialize/css/materialize.css'></a>");
         out.println("</head>");
         out.println("<body>");
         out.println("	<form action='/ExercicioJavaWeb/alunos/store' method='post'>");
