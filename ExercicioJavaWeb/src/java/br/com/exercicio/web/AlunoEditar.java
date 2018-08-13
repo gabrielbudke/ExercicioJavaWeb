@@ -1,6 +1,7 @@
 package br.com.exercicio.web;
 
 import br.com.exercicio.bean.AlunoBean;
+import br.com.exercicio.dao.AlunoDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -20,7 +21,7 @@ public class AlunoEditar extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         int id = Integer.parseInt(req.getParameter("id"));
-        AlunoBean aluno = new AlunoBean();
+        AlunoBean aluno = new AlunoDAO().obterPeloId(id);
         
         PrintWriter out = resp.getWriter();
         out.println("<!DOCTYPE html>");
